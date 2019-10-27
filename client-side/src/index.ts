@@ -1,5 +1,4 @@
-import { KeyLike } from "crypto";
-
+import lessons8 from "./lessons/8";
 // number 类型
 const a: number = 123;
 // string 类型
@@ -15,3 +14,35 @@ const h1 = document.createElement("h1");
 
 h1.innerHTML = "Hello, I am " + str + " " + a;
 document.body.appendChild(h1);
+
+/**
+ * 枚举
+ */
+
+// 默认枚举
+enum Status {
+  Uploading,
+  Success,
+  Failed,
+}
+
+console.log(Status.Uploading); // 0
+console.log(Status.Success); // 1
+console.log(Status.Failed); // 2
+
+// 修改初始编号
+enum Color {
+  Red = 2,
+  Blue,
+  Yellow,
+}
+console.log(Color.Red, Color.Blue, Color.Yellow); // 2, 3, 4
+
+// 指定任意字段
+enum StatusNum {
+  Success = 200,
+  NotFound = 404,
+  Error = 500,
+}
+console.log(StatusNum.Success, StatusNum.NotFound, StatusNum.Error);
+lessons8.fullName({fistName: "liu", lastName: "huan"});
