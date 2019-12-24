@@ -10,11 +10,10 @@
     "test": "mocha test/",
     "dev": "node index.js",
     "eslint": "eslint **.js",
-    "clean": "rimraf ./dist && mkdir dist",
+    "clean": "rimraf ./dist && mkdirp dist",
     "predev": "npm run clean && echo 我开始运行dev",
     "postdev": "echo 我运行完了dev,这个项目叫 $npm_package_name",
-    "dev:serve": "http-server",
-    "dev:livereload": "live-reload"
+    "dev:serve": "http-server"
   },
   "author": "",
   "license": "ISC",
