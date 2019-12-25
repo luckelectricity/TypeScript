@@ -1,0 +1,19 @@
+{
+  "name": "koa-api",
+  "version": "1.0.0",
+  "description": "koa 练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "luckelctricity"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "koa": "^2.11.0"
+  }
+}
