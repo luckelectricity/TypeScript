@@ -4,7 +4,8 @@
   "description": "koa 练习",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
     "axios": "^0.18.0",
     "koa": "^2.11.0",
     "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
