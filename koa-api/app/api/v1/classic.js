@@ -18,4 +18,17 @@ router.get('/v1/classic/latest', (ctx) => {
           }
   })
 
+router.post('/v1/:id/a/b', (ctx,next) => {
+  const params = ctx.params
+  const query = ctx.request.query
+  const header = ctx.request.header
+  const body = ctx.request.body
+  ctx.body = {
+    params,
+    query,
+    header,
+    body
+  }
+})
+
   module.exports = router
