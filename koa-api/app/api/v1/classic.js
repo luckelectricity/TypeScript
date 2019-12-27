@@ -19,6 +19,7 @@ router.get('/v1/classic/latest', (ctx) => {
   })
 
 router.post('/v1/:id/a/b', (ctx,next) => {
+  console.log(ctx.a.n)
   const params = ctx.params
   const query = ctx.request.query
   const header = ctx.request.header
