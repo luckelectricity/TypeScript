@@ -1,4 +1,6 @@
 const Router = require('koa-router')
+const { ValidationInteger } = require('../../validators/validator')
+
 const router = new Router()
 
 router.get('/v1/classic/latest', (ctx) => {
@@ -19,11 +21,11 @@ router.get('/v1/classic/latest', (ctx) => {
   })
 
 router.post('/v1/:id/a/b', (ctx,next) => {
-  console.log(ctx.a.n)
   const params = ctx.params
   const query = ctx.request.query
   const header = ctx.request.header
   const body = ctx.request.body
+  const V = await new ValidationInteger().validate(ctx)
   ctx.body = {
     params,
     query,
