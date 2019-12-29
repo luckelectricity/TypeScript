@@ -1,4 +1,4 @@
-class HttpException extends Error {
+class ParameterException extends Error {
     constructor(msg='有错误',code=400,errorCode='10001'){
         super()
         this.msg = msg
@@ -8,5 +8,5 @@ class HttpException extends Error {
 }
 
 module.exports = {
-    HttpException
+    ParameterException
 }

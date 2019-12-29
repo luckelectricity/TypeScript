@@ -1,10 +1,10 @@
-const { HttpException } = require('../core/http-exception')
+const { ParameterException } = require('../core/http-exception')
 
 const catchError = async function (ctx, next) {
   try {
     await next()
   } catch (error) {
-    if (error instanceof HttpException) {
+    if (error instanceof ParameterException) {
       ctx.body = {
         msg: error.msg,
         errorCode: error.errorCode,
@@ -14,6 +14,9 @@ const catchError = async function (ctx, next) {
       ctx.status = error.code
 
     } else {
+      if (global.config.env === 'dev') {
+        throw error
+      }
       ctx.body = {
         msg: error.msg || '服务器报错',
         errorCode: error.errorCode || 999,

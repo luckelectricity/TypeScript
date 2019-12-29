@@ -20,13 +20,15 @@ router.get('/v1/classic/latest', (ctx) => {
           }
   })
 
-router.post('/v1/:id/a/b', (ctx,next) => {
+router.post('/v1/:id/a/b', async (ctx,next) => {
   const params = ctx.params
   const query = ctx.request.query
   const header = ctx.request.header
   const body = ctx.request.body
-  const V = await new ValidationInteger().validate(ctx)
+  const v = await new ValidationInteger().validate(ctx)
+  const id = v.get('path.id')
   ctx.body = {
+    id: id,
     params,
     query,
     header,
