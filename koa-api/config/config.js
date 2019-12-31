@@ -5,7 +5,7 @@ const config = {
       host:'localhost',
       port: 3306,
       user: 'root',
-      password: 'liuhuan3'
+      password: 'liuhuan123'
     }
 }
 module.exports = config

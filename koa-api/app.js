@@ -10,7 +10,7 @@ app.use(catchError)
 app.use(parser())
 
 InitManage.initCore(app)
-
+require('./app/models/user')
 app.listen(3000, () => {
   console.log('3000')
 })
