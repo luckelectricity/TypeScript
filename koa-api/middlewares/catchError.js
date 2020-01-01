@@ -4,7 +4,12 @@ const catchError = async function (ctx, next) {
   try {
     await next()
   } catch (error) {
-    if (error instanceof ParameterException) {
+    const env = global.config.env === 'dev'
+    const httpError = error instanceof ParameterException
+    if (env && !httpError) {
+      throw error
+    }
+    if (httpError) {
       ctx.body = {
         msg: error.msg,
         errorCode: error.errorCode,
@@ -14,9 +19,6 @@ const catchError = async function (ctx, next) {
       ctx.status = error.code
 
     } else {
-      if (global.config.env === 'dev') {
-        throw error
-      }
       ctx.body = {
         msg: error.msg || '服务器报错',
         errorCode: error.errorCode || 999,

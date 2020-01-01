@@ -4,8 +4,8 @@ const requireDirectory = require('require-directory')
 class InitManage {
   static initCore(app){
     InitManage.app = app
-    InitManage.initRequireRou()
     InitManage.InitConfig()
+    InitManage.initRequireRou()
   }
   static initRequireRou(){
     requireDirectory(module, `${process.cwd()}/app/api`, {

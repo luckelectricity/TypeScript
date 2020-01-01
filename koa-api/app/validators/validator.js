@@ -1,5 +1,5 @@
 const { LinValidator, Rule } = require('../../core/lin-validator')
-
+const { User } = require('../models/user')
 // 校验参数是否为正整数
 class ValidationInteger extends LinValidator{
   constructor() {
@@ -13,4 +13,45 @@ class ValidationInteger extends LinValidator{
   }
 }
 
-module.exports = { ValidationInteger }
+class UserValidation extends LinValidator{
+  constructor(){
+    super()
+    this.email = [
+      new Rule('isEmail', '请输入正确的邮箱')
+    ]
+    this.nickname = [
+      new Rule("isLength", "昵称长度必须在2~10之间", 2, 10)
+    ]
+    this.password = [
+      new Rule(
+        "matches",
+        "密码长度必须在6~22位之间，包含字符、数字和 _ ",
+        /^[A-Za-z0-9_*&$#@]{6,22}$/
+      )
+    ]
+    this.confirm_password = this.password
+  }
+  validateConfirmPassword(data) {
+    if (!data.body.password || !data.body.confirm_password) {
+      throw new Error("两次输入的密码不一致，请重新输入")
+    }
+    let ok = data.body.password === data.body.confirm_password;
+    if (!ok) {
+      throw new Error("两次输入的密码不一致，请重新输入");
+    }
+  }
+  async validateEmail(data){
+    const email = data.body.email
+    const hasEmail = await User.findOne({
+      where:{
+        email
+      }
+    })
+    if(hasEmail) {
+      throw new Error('该邮箱已注册')
+    }
+  }
+
+}
+
+module.exports = { ValidationInteger, UserValidation }
