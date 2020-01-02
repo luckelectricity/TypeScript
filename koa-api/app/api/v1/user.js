@@ -4,6 +4,7 @@ const { User } = require('../../models/user')
 const router = new Router({
   prefix: '/v1/user'
 })
+const renderBody = require('../../lib/helper')
 
 router.post('/register', async (ctx) => {
   const v = await new UserValidation().validate(ctx)
@@ -12,7 +13,8 @@ router.post('/register', async (ctx) => {
     nickname: v.get('body.nickname'),
     password: v.get('body.password')
   }
-  User.create(user)
+  await User.create(user)
+  ctx.body = renderBody(200, user, '注册成功')
 })
 
 module.exports = router
