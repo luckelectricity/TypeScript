@@ -1,11 +1,11 @@
-const { ParameterException } = require('../core/http-exception')
+const { HttpException } = require('../core/http-exception')
 
 const catchError = async function (ctx, next) {
   try {
     await next()
   } catch (error) {
     const env = global.config.env === 'dev'
-    const httpError = error instanceof ParameterException
+    const httpError = error instanceof HttpException
     if (env && !httpError) {
       throw error
     }

@@ -8,9 +8,9 @@ function isTypeThis(val){
 }
 
 const LoginType = {
-  WXLOGIN: 101,
-  MOBILE: 102,
-  PWD: 103,
+  TYPEEMAIL: 101,
+  TYPEMOBILE: 102,
+  TYPEWX: 103,
   SUPERADMIN: 200,
   isTypeThis
 }

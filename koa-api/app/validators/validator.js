@@ -59,7 +59,7 @@ class UserValidation extends LinValidator {
 class TokenValidation extends LinValidator {
   constructor() {
     super()
-    this.acction = [
+    this.account = [
       new Rule('isLength', '账号必须大于6位，小于32位', { min: 6, max: 32 })
     ]
     this.pwd = [
