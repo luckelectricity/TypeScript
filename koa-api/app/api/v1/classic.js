@@ -1,23 +1,16 @@
 const Router = require('koa-router')
 const { ValidationInteger } = require('../../validators/validator')
+const { Auth } = require('../../../middlewares/auth')
+const router = new Router({
+  prefix: '/v1/classic'
+})
 
-const router = new Router()
-
-router.get('/v1/classic/latest', (ctx) => {
+router.get('/latest', new Auth(8).m, async (ctx) => {
     ctx.body = {
-            code: 200,
-            data: {
-              "content": "人生不能像做菜，把所有的料准备好才下锅",
-              "fav_nums": 0,
-              "id": 1,
-              "image": "http://127.0.0.1:5000/images/movie.7.png",
-              "index": 7,
-              "like_status": 0,
-              "pubdate": "2018-06-22",
-              "title": "李安<<饮食男女>>",
-              "type": 100
-            }
-          }
+      code: 200,
+      data: ctx.auth,
+      msg: 'success'
+    }
   })
 
 router.post('/v1/:id/a/b', async (ctx,next) => {

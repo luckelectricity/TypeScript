@@ -6,6 +6,7 @@ const { TokenValidation } = require('../../validators/validator')
 const { LoginType } = require('../../lib/enum')
 const { User } = require('../../models/user')
 const { generateToken } = require('../../../core/util')
+const { Auth } = require('../../../middlewares/auth')
 
 router.post('/', async (ctx) => {
   const v = await new TokenValidation().validate(ctx)
@@ -30,6 +31,6 @@ router.post('/', async (ctx) => {
 
 async function typeEmail(email,pwd) {
  const user = await User.emailLogin(email, pwd)
-  return generateToken(user.id, 2)
+  return generateToken(user.id, Auth.USER)
 }
 module.exports = router
