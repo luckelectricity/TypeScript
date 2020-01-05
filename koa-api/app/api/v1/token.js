@@ -5,25 +5,31 @@ const router = new Router({
 const { TokenValidation } = require('../../validators/validator')
 const { LoginType } = require('../../lib/enum')
 const { User } = require('../../models/user')
+const { generateToken } = require('../../../core/util')
 
 router.post('/', async (ctx) => {
   const v = await new TokenValidation().validate(ctx)
+  let token;
   switch (v.get('body.type')) {
     case LoginType.TYPEEMAIL:
-      const user = await typeEmail(v.get('body.account'), v.get('body.pwd'))
-      ctx.body = {
-        data: user
-      }
+    token = await typeEmail(v.get('body.account'), v.get('body.pwd'))
       break;
   
     default:
       throw new Error('type没有处理方式')
       break;
   }
+  ctx.body = {
+    code: 200,
+    data: {
+      token
+    },
+    msg: 'success'
+  }
 })
 
 async function typeEmail(email,pwd) {
  const user = await User.emailLogin(email, pwd)
- return user
+  return generateToken(user.id, 2)
 }
 module.exports = router
