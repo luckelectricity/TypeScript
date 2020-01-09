@@ -7,6 +7,7 @@ const { LoginType } = require('../../lib/enum')
 const { User } = require('../../models/user')
 const { generateToken } = require('../../../core/util')
 const { Auth } = require('../../../middlewares/auth')
+const { WXManager } = require('../../services/wx')
 
 router.post('/', async (ctx) => {
   const v = await new TokenValidation().validate(ctx)
@@ -15,10 +16,11 @@ router.post('/', async (ctx) => {
     case LoginType.TYPEEMAIL:
     token = await typeEmail(v.get('body.account'), v.get('body.pwd'))
       break;
-  
+    case LoginType.TYPEWX:
+      token = WXManager.codeToToken(v.get('body.account'))
+      break;
     default:
       throw new Error('type没有处理方式')
-      break;
   }
   ctx.body = {
     code: 200,

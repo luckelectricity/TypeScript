@@ -6,6 +6,7 @@ const router = new Router({
 })
 const renderBody = require('../../lib/helper')
 
+
 router.post('/register', async (ctx) => {
   const v = await new UserValidation().validate(ctx)
   const user = {
