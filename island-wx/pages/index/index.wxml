@@ -1,0 +1,1 @@
+<l-button size="long" bind:lintap="onGetToken">获取token</l-button>
