@@ -30,7 +30,7 @@ class User extends Model {
   }
   static async createUserToOpenId(openId) {
     let user = await User.create({
-      openId
+      openid: openId
     })
     return user
   }
