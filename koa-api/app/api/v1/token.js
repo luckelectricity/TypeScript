@@ -14,10 +14,10 @@ router.post('/', async (ctx) => {
   let token;
   switch (v.get('body.type')) {
     case LoginType.TYPEEMAIL:
-    token = await typeEmail(v.get('body.account'), v.get('body.pwd'))
+      token = await typeEmail(v.get('body.account'), v.get('body.pwd'))
       break;
     case LoginType.TYPEWX:
-      token = WXManager.codeToToken(v.get('body.account'))
+      token = await WXManager.codeToToken(v.get('body.account'))
       break;
     default:
       throw new Error('type没有处理方式')
