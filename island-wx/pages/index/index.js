@@ -23,5 +23,17 @@ Page({
         }
       }
     })
+  },
+  onVerifyToken(){
+    wx.request({
+      url: 'http://localhost:3000/v1/token/verify',
+      method: "post",
+      data:{
+        token: wx.getStorageSync('token')
+      },
+      success: (res) => {
+        console.log(res.data.data.tokenFlag)
+      }
+    })
   }
 })

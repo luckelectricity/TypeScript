@@ -6,4 +6,4 @@ function renderBody(code= 200,data = {}, msg = 'success'){
   }
 }
 
-module.exports = renderBody
+module.exports = {renderBody}

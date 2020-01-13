@@ -4,7 +4,7 @@ const { User } = require('../../models/user')
 const router = new Router({
   prefix: '/v1/user'
 })
-const renderBody = require('../../lib/helper')
+const {renderBody} = require('../../lib/helper')
 
 
 router.post('/register', async (ctx) => {
