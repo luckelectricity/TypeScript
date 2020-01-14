@@ -13,20 +13,4 @@ router.get('/latest', new Auth(8).m, async (ctx) => {
     }
   })
 
-router.post('/v1/:id/a/b', async (ctx,next) => {
-  const params = ctx.params
-  const query = ctx.request.query
-  const header = ctx.request.header
-  const body = ctx.request.body
-  const v = await new ValidationInteger().validate(ctx)
-  const id = v.get('path.id')
-  ctx.body = {
-    id: id,
-    params,
-    query,
-    header,
-    body
-  }
-})
-
 module.exports = router
