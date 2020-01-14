@@ -8,33 +8,10 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/app.js",
+      "program": "${workspaceFolder}/npm-script/test.js",
       "skipFiles": [
         "<node_internals>/**"
       ]
     },
-
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "nodemon",
-      "runtimeExecutable": "nodemon",
-      "program": "${workspaceFolder}/koa-api/app.js",
-      "restart": true,
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "启动程序",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${file}/koa-api/app.js"
-    }
   ]
 }
