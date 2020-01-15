@@ -11,6 +11,6 @@ router.get('/latest', new Auth().m, async (ctx) => {
       data: ctx.auth,
       msg: 'success'
     }
-  }
+  })
 
 module.exports = router
