@@ -72,8 +72,15 @@ axios.interceptors.response.use(
     return response
   },
   error => {
+    let msg = error.response.data.msg
+    let message = error.message
+    if (Array.isArray(msg)) {
+      message = msg[0]
+    } else {
+      message = msg
+    }
     Message({
-      message: error.message, // 错误信息
+      message: message, // 错误信息
       type: 'error',
       onClose: () => {
         if (error.config.showLoading) {
