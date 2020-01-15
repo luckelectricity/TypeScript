@@ -5,12 +5,12 @@ const router = new Router({
   prefix: '/v1/classic'
 })
 
-router.get('/latest', new Auth(8).m, async (ctx) => {
+router.get('/latest', new Auth().m, async (ctx) => {
     ctx.body = {
       code: 200,
       data: ctx.auth,
       msg: 'success'
     }
-  })
+  }
 
 module.exports = router
