@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a1a4e44-792d-4557-bf59-a7a4294e4bb6" name="Default Changelist" comment="" />
+    <list default="true" id="4a1a4e44-792d-4557-bf59-a7a4294e4bb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/art.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/v1/classic.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/classic.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -102,6 +107,7 @@
       <workItem from="1579061089013" duration="83000" />
       <workItem from="1579064132323" duration="19000" />
       <workItem from="1579065628387" duration="417000" />
+      <workItem from="1579230871996" duration="1884000" />
     </task>
     <servers />
   </component>
@@ -122,6 +128,70 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state width="1659" height="345" key="GridCell.Tab.0.bottom" timestamp="1579232946825">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946825" />
+    <state width="1659" height="345" key="GridCell.Tab.0.center" timestamp="1579232946823">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946823" />
+    <state width="1659" height="345" key="GridCell.Tab.0.left" timestamp="1579232946823">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946823" />
+    <state width="1659" height="345" key="GridCell.Tab.0.right" timestamp="1579232946824">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946824" />
+    <state width="1659" height="345" key="GridCell.Tab.1.bottom" timestamp="1579232946827">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.1.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946827" />
+    <state width="1659" height="345" key="GridCell.Tab.1.center" timestamp="1579232946826">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.1.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946826" />
+    <state width="1659" height="345" key="GridCell.Tab.1.left" timestamp="1579232946825">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.1.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946825" />
+    <state width="1659" height="345" key="GridCell.Tab.1.right" timestamp="1579232946826">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.1.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946826" />
+    <state width="1659" height="345" key="GridCell.Tab.2.bottom" timestamp="1579232946828">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.2.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946828" />
+    <state width="1659" height="345" key="GridCell.Tab.2.center" timestamp="1579232946828">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.2.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946828" />
+    <state width="1659" height="345" key="GridCell.Tab.2.left" timestamp="1579232946827">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.2.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946827" />
+    <state width="1659" height="345" key="GridCell.Tab.2.right" timestamp="1579232946828">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.2.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946828" />
+    <state width="1659" height="345" key="GridCell.Tab.3.bottom" timestamp="1579232946830">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.3.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946830" />
+    <state width="1659" height="345" key="GridCell.Tab.3.center" timestamp="1579232946829">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.3.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946829" />
+    <state width="1659" height="345" key="GridCell.Tab.3.left" timestamp="1579232946829">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.3.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946829" />
+    <state width="1659" height="345" key="GridCell.Tab.3.right" timestamp="1579232946830">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1659" height="345" key="GridCell.Tab.3.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1579232946830" />
     <state x="349" y="175" key="SettingsEditor" timestamp="1579065927035">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -131,21 +201,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/core/db.js</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/core/db.js</url>
-          <line>10</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/core/db.js</url>
-          <line>29</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/models/user.js</url>
           <line>7</line>
           <option name="timeStamp" value="5" />
@@ -154,6 +209,24 @@
           <url>file://$PROJECT_DIR$/app/models/user.js</url>
           <line>25</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/models/art.js</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/api/v1/classic.js</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/api/v1/classic.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
