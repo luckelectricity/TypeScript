@@ -22,7 +22,8 @@ router.post('/register', async (ctx) => {
   ctx.body = renderBody(200, user, '注册成功')
 })
 
-router.post('/',  new Auth().m, async ctx => {
+// 分页查询所有用户,权限为admin的用户才可以
+router.post('/',  new Auth(16).m, async ctx => {
   const v = await new ValidationInteger().validate(ctx)
   const page = v.get('body.page')
   const size = v.get('body.size')
