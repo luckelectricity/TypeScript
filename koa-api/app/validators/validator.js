@@ -89,4 +89,11 @@ class NotEmptyValidator extends LinValidator{
   }
 }
 
-module.exports = { ValidationInteger, UserValidation, TokenValidation, NotEmptyValidator }
+class GetPath extends LinValidator {
+  constructor() {
+    super()
+    this.path = [new Rule('isLength', '不能为空', { min: 1 })]
+  }
+}
+
+module.exports = { ValidationInteger, UserValidation, TokenValidation, NotEmptyValidator, GetPath }
