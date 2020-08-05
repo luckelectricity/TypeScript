@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 <l-button l-class="btn" size="long" bind:lintap="onGetToken">获取token</l-button>
 <l-button size="long" bind:lintap="onVerifyToken">验证token</l-button>
+=======
+<l-button l-class="btn" size="long" bind:lintap="onGetToken">获取token</l-button>
+<l-button size="long" bind:lintap="onVerifyToken">获取token</l-button>
+>>>>>>> one
