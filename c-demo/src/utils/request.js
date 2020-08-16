@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import config from './config.js'
 import { Toast } from 'cube-ui'
-// import { getStorage } from './storage'
+import { getStorage } from './storage'
 
 /* 请求合并只出现一次loading */
 let needLoadingRequestCount = 0
@@ -46,13 +46,14 @@ function loading (str) {
 /* 请求拦截 */
 axios.interceptors.request.use(
   config => {
-    const token = ''
+    const token = getStorage('token')
+    const base64 = 'Basic ' + window.btoa(token + ':')
     config.baseURL = ''
     config.timeout = 5000
     if (config.showLoading) {
       showFullScreenLoading()
     }
-    config.headers['TOKEN'] = token
+    config.headers['Authorization'] = base64
     return config
   },
   error => {

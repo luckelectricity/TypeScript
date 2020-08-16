@@ -11,15 +11,17 @@ const catchError = async function (ctx, next) {
     }
     if (httpError) {
       ctx.body = {
+        code: error.code,
         msg: error.msg,
         errorCode: error.errorCode,
         requestMsg: `${ctx.method} ${ctx.path}`
 
       }
-      ctx.status = error.code
+      ctx.status = 200
 
     } else {
       ctx.body = {
+        code: error.code,
         msg: error.msg || '服务器报错',
         errorCode: error.errorCode || 999,
         requestMsg: `${ctx.method} ${ctx.path}`

@@ -120,6 +120,7 @@
       <workItem from="1581782089343" duration="50000" />
       <workItem from="1583743545327" duration="1083000" />
       <workItem from="1593652337034" duration="778000" />
+      <workItem from="1597055532615" duration="956000" />
     </task>
     <servers />
   </component>
@@ -140,6 +141,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state width="1634" height="280" key="GridCell.Tab.0.bottom" timestamp="1597058636669">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1634" height="280" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1597058636669" />
+    <state width="1634" height="280" key="GridCell.Tab.0.center" timestamp="1597058636668">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1634" height="280" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1597058636668" />
+    <state width="1634" height="280" key="GridCell.Tab.0.left" timestamp="1597058636668">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1634" height="280" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1597058636668" />
+    <state width="1634" height="280" key="GridCell.Tab.0.right" timestamp="1597058636669">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1634" height="280" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1597058636669" />
     <state x="354" y="175" key="SettingsEditor" timestamp="1593657707129">
       <screen x="25" y="23" width="1655" height="1027" />
     </state>

@@ -14,5 +14,14 @@ module.exports = {
       postCompile: true,
       theme: true
     }
+  },
+  devServer: {
+    proxy: {
+      '/v1': {
+        target: 'http://127.0.0.1:3000',
+        ws: true,
+        changeOrigin: true
+      }
+    }
   }
 }
