@@ -12,10 +12,9 @@ const catchError = async function (ctx, next) {
     if (httpError) {
       ctx.body = {
         code: error.code,
-        msg: error.msg,
+        msg: Array.isArray(error.msg) ? error.msg[0] : error.msg,
         errorCode: error.errorCode,
-        requestMsg: `${ctx.method} ${ctx.path}`
-
+        requestMsg: `${ctx.method} ${ctx.path}`,
       }
       ctx.status = 200
 

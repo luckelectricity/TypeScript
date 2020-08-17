@@ -63,10 +63,26 @@ axios.interceptors.request.use(
 /* 请求响应拦截 */
 axios.interceptors.response.use(
   response => {
-    if (response.config.showLoading) {
+    const res = response.data
+    if (response.config.showLoading && res.code === 200) {
       tryHideFullScreenLoading()
     }
-    return response
+    if (res.code === 403) {
+      window.location = '/login'
+    }
+    if (res.code !== 200) {
+      Toast.$create({
+        txt: res.msg, // 错误信息
+        type: 'error',
+        time: 2000,
+        onTimeout: () => {
+          if (response.config.showLoading) {
+            tryHideFullScreenLoading() // 消除loading
+          }
+        }
+      }).show()
+    }
+    return res
   },
   error => {
     Toast.$create({
@@ -94,8 +110,8 @@ export function get (url, data, config = { showLoading: true }) {
   return new Promise((resolve, reject) => {
     axios
       .get(url, { params: data }, config)
-      .then(response => {
-        resolve(response.data)
+      .then(res => {
+        resolve(res)
       })
       .catch(err => {
         reject(err)
@@ -114,8 +130,8 @@ export function post (url, data = {}, config = { showLoading: true }) {
   return new Promise((resolve, reject) => {
     axios
       .post(url, data, config)
-      .then(response => {
-        resolve(response.data)
+      .then(res => {
+        resolve(res)
       })
       .catch(err => {
         reject(err)
