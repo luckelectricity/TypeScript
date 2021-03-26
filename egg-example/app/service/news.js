@@ -1,9 +1,10 @@
+'use strict';
 const Service = require('egg').Service;
 
 class NewsService extends Service {
   async list(page = 1) {
     // read config
-    console.log(this.config.news)
+    console.log(this.config.news);
     const { serverUrl, pageSize } = this.config.news;
 
     // use build-in http client to GET hacker-news api
